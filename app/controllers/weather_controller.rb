@@ -4,9 +4,11 @@ class WeatherController < ApplicationController
 
   def search
     # cookies[:zipcode] = params[:zipcode]
-    if zipcode = params("94702")
 
-
-
+    if params[:zipcode] == "94702"
+     @rain = true  
+    elsif params[:zipcode] == "94112"
+     @rain = false  
+    end
   end
 end 
